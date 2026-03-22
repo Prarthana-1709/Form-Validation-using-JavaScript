@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+    <link rel="stylesheet" href="class.css">
+</head>
+<body>
+    <h2>REGISTRATION FORM</h2>
+    <form onsubmit="return validForm()">
+    <label>Name</label>
+    <input type="text" id="name">
+    <div id="nameError" class="error"></div>
+
+    <label>Gender</label>
+    <div class="radio-group">
+        <input type="radio" name="Gender" value="male">
+        <input type="radio" name="Gender" value="female">
+    </div>
+    <div id="genderError" class="error"></div>
+
+
+    <label>Country</label>
+    <select id="Country">
+        <option value="">select country</option>
+        <option value="india">India</option>
+        <option value="USA">USA</option>
+        <option value="Uk">Uk</option>
+        <div id="countryError" class="error"></div>
+    </select>
+
+    <label>About you</label>
+    <textarea id="about" rows="4"></textarea>
+    <div id="aboutError" class="error"></div>
+
+    <label>
+        <input type="checkbox" id="terms">i agree to conditions
+    </label>
+    <div id="termsError" class="error"></div>
+    <button type="submit">Submit</button>
+    </form>
+    <script src="class.js"></script>
+</body>
+</html>
